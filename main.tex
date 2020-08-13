@@ -1,0 +1,202 @@
+%\documentclass[twocolumn]{article}
+%\usepackage[utf8]{inputenc}
+%\documentclass[10pt,journal,onecolumn]{IEEEtran}
+%\documentclass[10pt,journal,compsoc]{IEEEtran}
+\documentclass[10pt, journal, letterpaper]{IEEEtran}
+%\documentclass[10pt,journal,compsoc]{IEEEtran}
+
+
+% NB hyperref package may need to be commented for Latex upload
+\usepackage{cite}
+%\ifCLASSOPTIONcompsoc
+%\ifCLASSINFOpdf
+% \usepackage[pdftex]{graphicx}
+% declare the path(s) where your graphic files are
+% \graphicspath{{../pdf/}{../jpeg/}}
+% and their extensions so you won't have to specify these with
+% every instance of \includegraphics
+% \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+%  \usepackage[nocompress]{cite}
+%  \else
+% normal IEEE
+%  \usepackage{cite}
+%  \fi
+
+%  \ifCLASSINFOpdf
+
+%  \else
+%\fi
+%important package
+\usepackage{multirow} 
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{rotating}
+\usepackage{kantlipsum} %with the next two command (commath, allowdisplaybreaks) -> allow to break the formulas along the pages
+\usepackage{commath}
+\allowdisplaybreaks
+\usepackage{mathtools}  %with the next command adjust the vertical space between formulas
+%\setlength{\jot}{5pt}
+%\usepackage{ragged2e}   %if add \justify at each line, that line would be justified. This is used because the abstract of transaction style is not justified  ---- it is not compatible with twocolumn-IEEETrans
+%not important
+\usepackage{verbatim}
+\usepackage{xr-hyper} 
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{array,arydshln}
+\usepackage{graphicx,booktabs}
+\usepackage{longtable}
+%strikethrough not working when nested in a definition
+%\usepackage[normalem]{ulem}
+%\usepackage{soul}
+%\usepackage{fullpage} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% hyperref package may need to be commented for Latex upload
+%\usepackage[pdfusetitle, pdfauthor={Michael Shell, My institution}]{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{balance}
+\usepackage{flushend}
+\usepackage{epstopdf}
+\usepackage{wrapfig}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amsmath} %[cmex10]
+%\usepackage{flushend} %********************* This package has a bug: Do no include it
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{booktabs}
+\usepackage[style=base]{caption}
+\usepackage{subcaption} %******************* This package has conflict with sufig and subfigure
+%\usepackage{subfigure}
+%\usepackage{subfig}
+\usepackage{breqn}
+\newtheorem{thm}{Property}
+\newtheorem{thm1}{Theorem}
+\newtheorem{thm3}{Proposition}
+\newtheorem{thm5}{Remark}
+\newtheorem{thm7}{Lemma}
+\algnewcommand\algorithmicinput{\textbf{INPUT:}}
+\algnewcommand\INPUT{\item[\algorithmicinput]}
+\algnewcommand\algorithmicoutput{\textbf{OUTPUT:}}
+\algnewcommand\OUTPUT{\item[\algorithmicoutput]}
+\usepackage[table]{xcolor}
+%\usepackage[dvipsnames]{xcolor}
+%\usepackage[cmyk]{xcolor}
+%\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{enumitem,kantlipsum}
+\usepackage{adjustbox}
+% change the width and height of rows and columns in Tables
+\usepackage[thinlines]{easytable}
+
+\algdef{SE}[DOWHILE]{Do}{doWhile}{\algorithmicdo}[1]{\algorithmicwhile\ #1}
+\makeatletter
+\algnewcommand{\LineComment}[1]{\Statex \hskip\ALG@thistlm \texttt{#1}}
+\makeatother
+\newcommand{\export}{Exportation\xspace}
+\newcommand{\move}{Move\xspace}
+\newcommand{\ouralgorithm}{GPE\xspace} %%Green path exportation
+
+\newlength\mylength
+\setlength\mylength{\dimexpr.13\columnwidth-1\tabcolsep-0.2\arrayrulewidth\relax}
+\usepackage{color}
+% we need a better fix for this, see https://tex.stackexchange.com/questions/64298/error-with-xcolor-package
+\colorlet{BLUE}{blue}
+\usepackage{colortbl}
+\definecolor{LightCyan}{RGB}{155, 227, 247}
+%\captionsetup[figure]{belowskip=-8pt}
+%in test
+
+%\usepackage{nomencl}
+%\makenomenclature
+%% This code creates the groups
+% -----------------------------------------
+%\usepackage{etoolbox}
+%\renewcommand\nomgroup[1]{%
+%	\item[\bfseries
+%	\ifstrequal{#1}{P}{Parameters}{%
+%		\ifstrequal{#1}{V}{Variables}{%
+%			\ifstrequal{#1}{I}{Indices}{%
+%				\ifstrequal{#1}{B}{Binary~Variables}{}}}}%
+%	]}
+
+%DOUBLE QUOTATION COMMAND
+\newcommand{\dq}[1]{``#1''}
+
+% To remove all comments, comment out the definition and use the commented-out
+% empty definition below
+% otherwise you can comment the line \commentsontrue 
+\newcommand{\commentBy}[3]{\textcolor{#1}{\textbf{#2:} #3}}
+%\newcommand{\commentBy}[3]{\ignorespaces}
+
+\newif\ifcommentson
+%uncomment the line below to show comments
+\commentsontrue
+
+\newcommand{\ste}[1]{\ifcommentson \commentBy{blue}{SS}{#1} \fi}
+%\newcommand{\lc}[1]{\ifcommentson \commentBy{blue}{LC}{#1} \fi}
+\newcommand{\mm}[1]{\ifcommentson \commentBy{orange}{MM}{#1} \fi}
+
+\newif\ifextended
+\newif\ifshortver
+
+%%% Show only short version in black
+%%%        \shorvetrue 
+%%%        %\extendedtrue 
+
+%%% Show only extended version in black
+%%%        %\shorvetrue 
+%%%        \extendedtrue 
+
+%%% Show short version in blue and extended version in purple
+%%%        \shorvetrue 
+%%%        \extendedtrue 
+
+\shortvertrue
+%\extendedtrue
+
+\newcommand{\extended}[1]{\ifextended \ifshortver \textcolor{purple}{#1} \else \textcolor{black}{#1} \fi  \fi}
+\newcommand{\shortver}[1]{\ifshortver \ifextended \textcolor{blue}{#1} \else \textcolor{black}{#1} \fi \fi}
+
+%\newcommand{\optional}[1]{#1}
+%\newcommand{\optional}[1]{\textcolor{Orange}{#1}}
+\newcommand{\optional}[1]{\ignorespaces}
+
+
+\newif\ifrevisionactive
+\newif\ifshowdeleted
+\revisionactivetrue
+%\showdeletedtrue
+
+\newcommand{\revised}[1]{\ifrevisionactive \textcolor{blue}{#1} \else \textcolor{black}{#1} \fi}
+
+%\newcommand{\deleted}[1]{\ifrevisionactive \ifshowdeleted \textcolor{red}{\sout{#1}} \else \fi \fi}
+\newcommand{\deleted}[1]{\ifrevisionactive \ifshowdeleted \textcolor{orange}{#1} \else \fi \fi}
+
+
+% correct bad hyphenation here
+\hyphenation{net-works fa-ci-li-ta-tes fa-ci-li-ta-te mo-ni-to-ring par-ti-cu-lar pe-ri-o-di-cal-ly mi-ni-mi-zing va-ria-tions de-li-ve-red per-ri-o-di-cal-ly}
+
+
+\begin{document}
+% \title{Active Monitoring for Virtual Networks: Real-Time Delay Measurement for SDN-based Networks}
+\title{Active Delay Measurement for SDN-based Networks}
+% \author{Mohammad Mahdi Tajiki, H. Qasemi, Stefano Salsano, Steve Uhlig}
+\author{}
+%\date{October 2018}
+\maketitle	
+\begin{abstract}
+\end{abstract}	
+\begin{IEEEkeywords} 
+    Passive Network Monitoring;
+\end{IEEEkeywords}
+
+\section{Introduction}
+
+\section{Traffic}
+Flow per second and Bit per second
+
+\end{document}
