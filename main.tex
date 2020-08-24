@@ -178,13 +178,12 @@
 
 
 % correct bad hyphenation here
-\hyphenation{net-works fa-ci-li-ta-tes fa-ci-li-ta-te mo-ni-to-ring par-ti-cu-lar pe-ri-o-di-cal-ly mi-ni-mi-zing va-ria-tions de-li-ve-red per-ri-o-di-cal-ly}
+\hyphenation{net-works mo-ni-to-ring par-ti-cu-lar pe-ri-o-di-cal-ly mi-ni-mi-zing va-ria-tions de-li-ve-red per-ri-o-di-cal-ly}
 
 
 \begin{document}
 % \title{Active Monitoring for Virtual Networks: Real-Time Delay Measurement for SDN-based Networks}
 \title{Active Delay Measurement for SDN-based Networks}
-% \author{Mohammad Mahdi Tajiki, H. Qasemi, Stefano Salsano, Steve Uhlig}
 \author{}
 %\date{October 2018}
 \maketitle	
@@ -196,13 +195,124 @@
 
 \section{Introduction}
 
-\section{Traffic Trend}
+\section{Network Throughput}
+
 \subsection{Flow per Second and bit per Second}
+Dashed lines show the lockdowns of different countries in Europe. %Worldwide curfews, quarantines, and similar restrictions were in place to prevent the further spread of COVID-19.
+Countries and territories around the world have enforced lockdowns of varying degrees. Some include total movement control while others have enforced restrictions based on time. Mostly, only essential businesses are allowed to remain open.% Schools, universities and colleges have closed either on a nationwide or local basis in 161 countries, affecting approximately 98.6 per cent of the world's student population.
+
+\begin{table}[]
+    \centering
+    \resizebox{\columnwidth}{!}{
+    \begin{tabular}{|l|c||l|c|}\hline
+        Country & Lockdown Date & Country & Lockdown Date \\\hline\hline
+        Italy & 2020-03-09 & Denmark & 2020-03-11\\\hline
+        Norway & 2020-03-12 & Spain & 2020-03-14\\\hline
+        Austria & 2020-03-16 & Switzerland & 2020-03-17\\\hline
+        Ukraine & 2020-03-17 & France & 2020-03-17 \\\hline
+        Luxembourgers & 2020-03-18 & Germany & 2020-03-20\\\hline
+        Germany & 2020-03-21 & UK-Greece & 2020-03-23\\\hline
+        Romania & 2020-03-25 & Finland & 2020-03-27\\\hline
+    \end{tabular}}
+    \caption{Lock-downs}
+    \label{tab:lockdowns}
+\end{table}
+
+In table~\ref{tab:lockdowns}, pandemic lockdowns are defined as the shutdown of parts of the economy, due to non-pharmaceutical anti-pandemic measures and are enforceable by law like:
+\begin{itemize}
+    \item Closing of schools and kindergartens
+    \item Closing of non-essential shops (shops and stores apart from food, doctors and drug stores)
+    \item Closing of non-essential production
+    \item Cancellation of recreational venues and closing of public places
+    \item Curfews
+    \item Stay-at-home orders and total movement control
+\end{itemize}
+The table does not contain:
+\begin{itemize}
+    \item Measures with smaller economic impacts like:
+    \begin{itemize}
+        \item border closures
+        \item social distancing measures and social movement restrictions
+        \item travel restrictions.
+    \end{itemize}
+    \item Other non-pharmaceutical anti-pandemic measures like mandatory quarantines after travel, self quarantine and social distancing measures
+    \item Any measures which are voluntary rather than enforceable by law 
+\end{itemize}
+
+
+\begin{figure*}
+    \begin{subfigure}{\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/traffic_trend_bps.png}
+          \caption{Bytes per second}
+          \label{fig:traffic_trend_bps}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/traffic_trend_fps.png}
+          \caption{Flow per second}
+          \label{fig:traffic_trend_fps}
+    \end{subfigure}
+    \caption{Network Throughput}
+    \label{fig:network_throughput}
+\end{figure*}
+
+The sampling of bps has faced a problem since 2020/03/26 12:55. 
 
 \subsection{Break-down to Academic and Business}
 
+\begin{figure*}
+    \begin{subfigure}{\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/traffic_trend_bps_AcaVsBus.png}
+          \caption{Bytes per second}
+          \label{fig:traffic_trend_acaVSbusi_bps}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/traffic_trend_fps_AcaVsBus.png}
+          \caption{Flow per second}
+          \label{fig:traffic_trend_acaVSbusi_fps}
+    \end{subfigure}
+    \caption{Network Throughput Breakdown}
+    \label{fig:network_throughput_breakdown}
+\end{figure*}
+
 \section{NRENs Traffic Pattern}
 \subsection{fps and bps}
+\begin{figure*}
+    \begin{subfigure}{\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/jisc_bps.png}
+          \caption{JISC}
+          \label{fig:jisc_bps}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/heanet_bps.png}
+          \caption{HEANET}
+          \label{fig:HEANET_bps}
+    \end{subfigure}
+    \caption{NRENs' Throughput (bps)}
+    \label{fig:nrens_bps}
+\end{figure*}
+
+\begin{figure*}
+    \begin{subfigure}{\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/jisc_fps.png}
+          \caption{JISC}
+          \label{fig:jisc_fps}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/heanet_fps.png}
+          \caption{HEANET}
+          \label{fig:HEANET_fps}
+    \end{subfigure}
+    \caption{NRENs' Throughput (fps)}
+    \label{fig:nrens_fps}
+\end{figure*}
 \subsection{break-down to Academic and Business}
 \subsection{histogram}
 
