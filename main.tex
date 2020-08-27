@@ -183,7 +183,7 @@
 
 \newcommand\linearFigSze{0.48}
 \newcommand\histFigSze{0.48}
-\newcommand\boxFigSze{0.7}
+\newcommand\boxFigSze{1}
 
 \begin{document}
 % \title{Active Monitoring for Virtual Networks: Real-Time Delay Measurement for SDN-based Networks}
@@ -203,7 +203,7 @@
 
 \subsection{Flow per Second and bit per Second}
 Dashed lines show the lockdowns of different countries in Europe. %Worldwide curfews, quarantines, and similar restrictions were in place to prevent the further spread of COVID-19.
-Countries and territories around the world have enforced lockdowns of varying degrees. Some include total movement control while others have enforced restrictions based on time. Mostly, only essential businesses are allowed to remain open.% Schools, universities and colleges have closed either on a nationwide or local basis in 161 countries, affecting approximately 98.6 per cent of the world's student population.
+% Countries and territories around the world have enforced lockdowns of varying degrees. Some include total movement control while others have enforced restrictions based on time. Mostly, only essential businesses are allowed to remain open.% Schools, universities and colleges have closed either on a nationwide or local basis in 161 countries, affecting approximately 98.6 per cent of the world's student population.
 
 \begin{table}[]
     \centering
@@ -400,6 +400,9 @@ The sampling of bps has faced a problem since 2020/03/26 12:55.
 \end{figure*}
 
 \subsection{break-down to Academic and Business}
+A2A: Academic to Academic
+B2B: Business to Business
+Uncategorized: Small flows aggregated
 \begin{figure*}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
@@ -695,8 +698,28 @@ The sampling of bps has faced a problem since 2020/03/26 12:55.
     \label{fig:nrens_hist_fps}
 \end{figure*}
 
+\subsection{Sankey Plot}
+\begin{figure*}
+    \begin{subfigure}{\boxFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/}
+          \caption{Generating Traffic}
+          \label{fig:top_generating_fps}
+    \end{subfigure}\\
+    \begin{subfigure}{\boxFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/top_AS_receiving_fps.png}
+          \caption{Receiving Traffic}
+          \label{fig:top_receiving_fps}
+    \end{subfigure}
+    \caption{Top ASes (fps)}
+    \label{fig:top_AS_fps}
+\end{figure*}
+
 \section{ASes}
 \subsection{Top ASes fps and bps (box plot)}
+In the following, top ASes are specified. The approach used to specify the top ASes is 'top over time': average the total output of each AS during the sampling period, and select the top x ASes.
+Each AS may generate traffic or receives traffic, therefore, plots are divided into two categories 'Top ASes Generating Traffic' and 'Top ASes Receiving Traffic'.
 \begin{figure*}
     \begin{subfigure}{\boxFigSze\textwidth}
           \centering
@@ -716,13 +739,13 @@ The sampling of bps has faced a problem since 2020/03/26 12:55.
 \begin{figure*}
     \begin{subfigure}{\boxFigSze\textwidth}
           \centering
-          \includegraphics[width=\textwidth]{img/top_AS_generating_fps.png}
+          \includegraphics[width=\columnwidth]{img/top_AS_generating_fps.png}
           \caption{Generating Traffic}
           \label{fig:top_generating_fps}
-    \end{subfigure}
+    \end{subfigure}\\
     \begin{subfigure}{\boxFigSze\textwidth}
           \centering
-          \includegraphics[width=\textwidth]{img/top_AS_receiving_fps.png}
+          \includegraphics[width=\columnwidth]{img/top_AS_receiving_fps.png}
           \caption{Receiving Traffic}
           \label{fig:top_receiving_fps}
     \end{subfigure}
