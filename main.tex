@@ -181,6 +181,8 @@
 \hyphenation{net-works mo-ni-to-ring par-ti-cu-lar pe-ri-o-di-cal-ly mi-ni-mi-zing va-ria-tions de-li-ve-red per-ri-o-di-cal-ly}
 
 
+\newcommand\figSze{0.48}
+
 \begin{document}
 % \title{Active Monitoring for Virtual Networks: Real-Time Delay Measurement for SDN-based Networks}
 \title{Active Delay Measurement for SDN-based Networks}
@@ -239,15 +241,14 @@ The table does not contain:
     \item Any measures which are voluntary rather than enforceable by law 
 \end{itemize}
 
-
 \begin{figure*}
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{\figSze\textwidth}
           \centering
           \includegraphics[width=\columnwidth]{img/traffic_trend_bps.png}
           \caption{Bytes per second}
           \label{fig:traffic_trend_bps}
     \end{subfigure}
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{\figSze\textwidth}
           \centering
           \includegraphics[width=\columnwidth]{img/traffic_trend_fps.png}
           \caption{Flow per second}
@@ -260,15 +261,14 @@ The table does not contain:
 The sampling of bps has faced a problem since 2020/03/26 12:55. 
 
 \subsection{Break-down to Academic and Business}
-
 \begin{figure*}
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{\figSze\textwidth}
           \centering
           \includegraphics[width=\columnwidth]{img/traffic_trend_bps_AcaVsBus.png}
           \caption{Bytes per second}
           \label{fig:traffic_trend_acaVSbusi_bps}
     \end{subfigure}
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{\figSze\textwidth}
           \centering
           \includegraphics[width=\columnwidth]{img/traffic_trend_fps_AcaVsBus.png}
           \caption{Flow per second}
@@ -281,125 +281,417 @@ The sampling of bps has faced a problem since 2020/03/26 12:55.
 \section{NRENs Traffic Pattern}
 \subsection{fps and bps}
 \begin{figure*}
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{\figSze\textwidth}
           \centering
           \includegraphics[width=\columnwidth]{img/jisc_bps.png}
           \caption{JISC}
           \label{fig:jisc_bps}
     \end{subfigure}
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{\figSze\textwidth}
           \centering
           \includegraphics[width=\columnwidth]{img/heanet_bps.png}
           \caption{HEANET}
           \label{fig:HEANET_bps}
     \end{subfigure}
-    \begin{subfigure}{\textwidth}
-          \centering
-          \includegraphics[width=\columnwidth]{img/us_bps.png}
-          \caption{US NREN}
-          \label{fig:US_bps}
-    \end{subfigure}
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{\figSze\textwidth}
           \centering
           \includegraphics[width=\columnwidth]{img/aconet_bps.png}
           \caption{ACONET Austria}
           \label{fig:aconet_bps}
     \end{subfigure}
-    \begin{subfigure}{\textwidth}
-          \centering
-          \includegraphics[width=\columnwidth]{img/china_bps.png}
-          \caption{China NREN}
-          \label{fig:china_bps}
-    \end{subfigure}
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{\figSze\textwidth}
           \centering
           \includegraphics[width=\columnwidth]{img/dfn_bps.png}
           \caption{DFN Germany}
           \label{fig:dfn_bps}
     \end{subfigure}
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{\figSze\textwidth}
           \centering
           \includegraphics[width=\columnwidth]{img/garr_bps.png}
-        %   \caption{GARR Italy}
+          \caption{GARR Italy}
           \label{fig:garr_bps}
     \end{subfigure}
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{\figSze\textwidth}
           \centering
           \includegraphics[width=\columnwidth]{img/rediris_bps.png}
-        %   \caption{REDIRIS Spain}
+          \caption{REDIRIS Spain}
           \label{fig:rediris_bps}
     \end{subfigure}
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{\figSze\textwidth}
           \centering
           \includegraphics[width=\columnwidth]{img/renater_bps.png}
-        %   \caption{RENATER France}
+          \caption{RENATER France}
           \label{fig:renater_bps}
+    \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/us_bps.png}
+          \caption{US NREN}
+          \label{fig:US_bps}
+    \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/china_bps.png}
+          \caption{China NREN}
+          \label{fig:china_bps}
     \end{subfigure}
     \caption{NRENs' Throughput (bps)}
     \label{fig:nrens_bps}
 \end{figure*}
-
 \begin{figure*}
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{\figSze\textwidth}
           \centering
           \includegraphics[width=\columnwidth]{img/jisc_fps.png}
           \caption{JISC}
           \label{fig:jisc_fps}
     \end{subfigure}
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{\figSze\textwidth}
           \centering
           \includegraphics[width=\columnwidth]{img/heanet_fps.png}
           \caption{HEANET}
           \label{fig:HEANET_fps}
     \end{subfigure}
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{\figSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/us_fps.png}
-          \caption{US NREN}
-          \label{fig:US_fps}
-    \end{subfigure}
-    \begin{subfigure}{\textwidth}
-          \centering
-          \includegraphics[width=\columnwidth]{img/aconet.fps.png}
+          \includegraphics[width=\columnwidth]{img/aconet_fps.png}
           \caption{ACONET Austria}
           \label{fig:aconet_fps}
     \end{subfigure}
-    \begin{subfigure}{\textwidth}
-          \centering
-          \includegraphics[width=\columnwidth]{img/china_fps.png}
-          \caption{China NREN}
-          \label{fig:china_fps}
-    \end{subfigure}
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{\figSze\textwidth}
           \centering
           \includegraphics[width=\columnwidth]{img/dfn_fps.png}
           \caption{DFN Germany}
           \label{fig:dfn_fps}
     \end{subfigure}
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{\figSze\textwidth}
           \centering
           \includegraphics[width=\columnwidth]{img/garr_fps.png}
           \caption{GARR Italy}
           \label{fig:garr_fps}
     \end{subfigure}
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{\figSze\textwidth}
           \centering
           \includegraphics[width=\columnwidth]{img/rediris_fps.png}
           \caption{REDIRIS Spain}
           \label{fig:rediris_fps}
     \end{subfigure}
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{\figSze\textwidth}
           \centering
           \includegraphics[width=\columnwidth]{img/renater_fps.png}
           \caption{RENATER France}
           \label{fig:renater_fps}
+    \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/us_fps.png}
+          \caption{US NREN}
+          \label{fig:US_fps}
+    \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/china_fps.png}
+          \caption{China NREN}
+          \label{fig:china_fps}
     \end{subfigure}
     \caption{NRENs' Throughput (fps)}
     \label{fig:nrens_fps}
 \end{figure*}
 
 \subsection{break-down to Academic and Business}
+\begin{figure*}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/jisc_aca_bps.png}
+          \caption{JISC}
+          \label{fig:jisc_aca_bps}
+    \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/heanet_aca_fps.png}
+    %       \caption{HEANET}
+    %       \label{fig:HEANET_aca_fps}
+    % \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/aconet_aca_bps.png}
+    %       \caption{ACONET Austria}
+    %       \label{fig:aconet_aca_bps}
+    % \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/dfn_aca_bps.png}
+          \caption{DFN Germany}
+          \label{fig:dfn_aca_bps}
+    \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/garr_aca_bps.png}
+          \caption{GARR Italy}
+          \label{fig:garr_aca_bps}
+    \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/rediris_aca_fps.png}
+    %       \caption{REDIRIS Spain}
+    %       \label{fig:rediris_aca_fps}
+    % \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/renater_aca_fps.png}
+    %       \caption{RENATER France}
+    %       \label{fig:renater_aca_fps}
+    % \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/us_aca_bps.png}
+          \caption{US NREN}
+          \label{fig:US_aca_bps}
+    \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/china_aca_fps.png}
+    %       \caption{China NREN}
+    %       \label{fig:china_aca_fps}
+    % \end{subfigure}
+    \caption{Traffic Destinated to Academic ASes of NRENs' (fps)}
+    \label{fig:nrens_aca_bps}
+\end{figure*}
+\begin{figure*}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/jisc_aca_fps.png}
+          \caption{JISC}
+          \label{fig:jisc_aca_fps}
+    \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/heanet_aca_fps.png}
+    %       \caption{HEANET}
+    %       \label{fig:HEANET_aca_fps}
+    % \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/aconet_aca_fps.png}
+          \caption{ACONET Austria}
+          \label{fig:aconet_aca_fps}
+    \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/dfn_aca_fps.png}
+          \caption{DFN Germany}
+          \label{fig:dfn_aca_fps}
+    \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/garr_aca_fps.png}
+          \caption{GARR Italy}
+          \label{fig:garr_aca_fps}
+    \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/rediris_aca_fps.png}
+    %       \caption{REDIRIS Spain}
+    %       \label{fig:rediris_aca_fps}
+    % \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/renater_aca_fps.png}
+    %       \caption{RENATER France}
+    %       \label{fig:renater_aca_fps}
+    % \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/us_aca_fps.png}
+          \caption{US NREN}
+          \label{fig:US_aca_fps}
+    \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/china_aca_fps.png}
+    %       \caption{China NREN}
+    %       \label{fig:china_aca_fps}
+    % \end{subfigure}
+    \caption{Traffic Destinated to Academic ASes of NRENs' (fps)}
+    \label{fig:nrens_aca_fps}
+\end{figure*}
+
+\begin{figure*}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/jisc_busi_bps.png}
+          \caption{JISC}
+          \label{fig:jisc_busi_bps}
+    \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/heanet_busi_fps.png}
+    %       \caption{HEANET}
+    %       \label{fig:HEANET_busi_fps}
+    % \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/aconet_busi_bps.png}
+    %       \caption{ACONET Austria}
+    %       \label{fig:aconet_aca_bps}
+    % \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/dfn_busi_bps.png}
+          \caption{DFN Germany}
+          \label{fig:dfn_busi_bps}
+    \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/garr_busi_bps.png}
+          \caption{GARR Italy}
+          \label{fig:garr_busi_bps}
+    \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/rediris_busi_fps.png}
+    %       \caption{REDIRIS Spain}
+    %       \label{fig:rediris_aca_fps}
+    % \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/renater_busi_fps.png}
+    %       \caption{RENATER France}
+    %       \label{fig:renater_aca_fps}
+    % \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/us_busi_bps.png}
+          \caption{US NREN}
+          \label{fig:US_busi_bps}
+    \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/china_busi_fps.png}
+    %       \caption{China NREN}
+    %       \label{fig:china_aca_fps}
+    % \end{subfigure}
+    \caption{Traffic Destinated to Academic ASes of NRENs' (fps)}
+    \label{fig:nrens_busi_bps}
+\end{figure*}
+\begin{figure*}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/jisc_busi_fps.png}
+          \caption{JISC}
+          \label{fig:jisc_busi_fps}
+    \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/heanet_busia_fps.png}
+    %       \caption{HEANET}
+    %       \label{fig:HEANET_busi_fps}
+    % \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/aconet_busi_fps.png}
+          \caption{ACONET Austria}
+          \label{fig:aconet_busi_fps}
+    \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/dfn_busi_fps.png}
+          \caption{DFN Germany}
+          \label{fig:dfn_busi_fps}
+    \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/garr_busi_fps.png}
+    %       \caption{GARR Italy}
+    %       \label{fig:garr_busi_fps}
+    % \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/rediris_busi_fps.png}
+    %       \caption{REDIRIS Spain}
+    %       \label{fig:rediris_aca_fps}
+    % \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/renater_busi_fps.png}
+    %       \caption{RENATER France}
+    %       \label{fig:renater_aca_fps}
+    % \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/us_busi_fps.png}
+          \caption{US NREN}
+          \label{fig:US_busi_fps}
+    \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/china_busi_fps.png}
+    %       \caption{China NREN}
+    %       \label{fig:china_aca_fps}
+    % \end{subfigure}
+    \caption{Traffic Destinated to Academic ASes of NRENs' (fps)}
+    \label{fig:nrens_busi_fps}
+\end{figure*}
+
 \subsection{histogram}
+
+\begin{figure*}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/jisc_hist_fps.png}
+          \caption{JISC}
+          \label{fig:jisc_hist_fps}
+    \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/heanet_hist_fps.png}
+    %       \caption{HEANET}
+    %       \label{fig:HEANET_busi_fps}
+    % \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/aconet_hist_fps.png}
+          \caption{ACONET Austria}
+          \label{fig:aconet_hist_fps}
+    \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/dfn_hist_fps.png}
+          \caption{DFN Germany}
+          \label{fig:dfn_hist_fps}
+    \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/garr_hist_fps.png}
+          \caption{GARR Italy}
+          \label{fig:garr_hist_fps}
+    \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/rediris_hist_fps.png}
+          \caption{REDIRIS Spain}
+          \label{fig:rediris_hist_fps}
+    \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/renater_hist_fps.png}
+          \caption{RENATER France}
+          \label{fig:renater_hist_fps}
+    \end{subfigure}
+    \begin{subfigure}{\figSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/us_hist_fps.png}
+          \caption{US NREN}
+          \label{fig:US_hist_fps}
+    \end{subfigure}
+    % \begin{subfigure}{\figSze\textwidth}
+    %       \centering
+    %       \includegraphics[width=\columnwidth]{img/china_hist_fps.png}
+    %       \caption{China NREN}
+    %       \label{fig:china_aca_fps}
+    % \end{subfigure}
+    \caption{Flow per Second Histogram}
+    \label{fig:nrens_hist_fps}
+\end{figure*}
 
 \section{ASes}
 \subsection{Top ASes fps and bps (box plot)}
