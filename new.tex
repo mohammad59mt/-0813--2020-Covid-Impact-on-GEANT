@@ -212,37 +212,89 @@ Story: (1) Changes in the network before the COVID lockdown including the differ
 Europe has been building a strong academic network, this xyz is what we can see by observing the traffic. Compare Christmas/winter holiday traffic with COVID effected traffic: (1) base week comparison with Christmas, (2) base week comparison with COVID, (3) comparison of Christmas with COVID
 
 \section{Impact of New Year Holidays on GEANT}
-
+In We do sampling over two different weeks, one in Dec long away from new year holidays (between 2019/12/09 - 2019/12/15) and the other one during new year holidays (2019/12/30 - 2020/01/05)
 \subsection{Total Traffic Throughput}
-\begin{figure*}
+\begin{figure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/BCH2_byterate.png}
+          \caption{Data-rate before new year holidays}
+          \label{fig:BCH2_bps}
+    \end{subfigure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/CH2_byterate.png}
+          \caption{Data-rate during new year holidays}
+          \label{fig:CH2_bps}
+    \end{subfigure}
+    \caption{Impact of new year holidays on data rate}
+    \label{fig:datarate_BCH_CH}
+\end{figure}
+
+\begin{figure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
           \includegraphics[width=\columnwidth]{img/BCH2_flowrate.png}
-          \caption{Bytes per second}
-          \label{fig:traffic_trend_bps}
+          \caption{Flow-rate before new year holidays}
+          \label{fig:BCH2_fps}
     \end{subfigure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/traffic_trend_fps.png}
-          \caption{Flow per second}
-          \label{fig:traffic_trend_fps}
+          \includegraphics[width=\columnwidth]{img/CH2_flowrate.png}
+          \caption{Flow-rate during new year holidays}
+          \label{fig:CH2_fps}
     \end{subfigure}
-    \caption{Network Throughput}
-    \label{fig:network_throughput}
-\end{figure*}
+    \caption{Impact of new year holidays on flow rate}
+    \label{fig:flowrate_BCH_CH}
+\end{figure}
+
 \subsection{Academic and Business Traffic}
+\begin{figure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/BCH2_acuBus_bps.png}
+          \caption{Data-rate before new year holidays}
+          \label{fig:BCH2_acaBus_bps}
+    \end{subfigure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/CH2_acuBus_bps.png}
+          \caption{Data-rate during new year holidays}
+          \label{fig:CH2_acaBus_bps}
+    \end{subfigure}
+    \caption{Impact of new year holidays on data rate of academic and business traffic}
+    \label{fig:datarate_acaBus_BCH_CH}
+\end{figure}
+
+\begin{figure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/BCH2_acuBus_fps.png}
+          \caption{Flow-rate before new year holidays}
+          \label{fig:BCH2_acaBus_fps}
+    \end{subfigure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/CH2_acuBus_fps.png}
+          \caption{Flow-rate during new year holidays}
+          \label{fig:CH2_acaBus_fps}
+    \end{subfigure}
+    \caption{Impact of new year holidays on flow rate of academic and business traffic}
+    \label{fig:flowrate_acaBus_BCH_CH}
+\end{figure}
 
 \subsection{NRENs Traffic}
 
 \subsection{Top ASes}
 
-
+\subsection{Discussion}
 
 
 
 \section{Impact of Covid-19 on GEANT}
 
 \subsection{Total Traffic Throughput}
+Due to the COVID19 pandemic, traffic in terms of bytes dropped by almost one-third, whereas overall flows dropped by almost half. This difference in observation could be due to the nature of flows. A flow is a unidirectional sequence of packets that contains among other things an ingress interface, IP protocol, source and destination IP addresses, source and destination ports and type of service. While flows require an ingress interface and a request initiating a flow, traffic in bytes may just be machine-to-machine. This is further supported by similar trends during the Christmas/NYE holidays.
 
 \subsection{Academic and Business Traffic}
 
@@ -250,11 +302,16 @@ Europe has been building a strong academic network, this xyz is what we can see 
 
 \subsection{Top ASes}
 
+\subsection{Discussion}
+
+\section{Comparing Covid-19 and New Year Holidays impact on GEANT}
+
+
+
 
 \section{OLD}
 \subsection{network Throughput}
 
-Due to the COVID19 pandemic, traffic in terms of bytes dropped by almost one-third, whereas overall flows dropped by almost half. This difference in observation could be due to the nature of flows. A flow is a unidirectional sequence of packets that contains among other things an ingress interface, IP protocol, source and destination IP addresses, source and destination ports and type of service. While flows require an ingress interface and a request initiating a flow, traffic in bytes may just be machine-to-machine. This is further supported by similar trends during the Christmas/NYE holidays.
 
 \begin{figure*}
     \begin{subfigure}{\linearFigSze\textwidth}
