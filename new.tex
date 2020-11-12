@@ -343,17 +343,20 @@ In We do sampling over two different weeks, one in Dec long away from new year h
           \centering
           \includegraphics[width=\columnwidth]{img/BCH2_top14AS_recieving_fps.png}
           \caption{Top 14 ASes receiving flow before new year holidays}
-          \label{fig:BCH2_topAS_gen_fps}
+          \label{fig:BCH2_topAS_rec_fps}
     \end{subfigure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
           \includegraphics[width=\columnwidth]{img/CH2_top14AS_recieving_fps.png}
           \caption{Top 14 ASes receiving flow during new year holidays}
-          \label{fig:CH2_topAS_gen_fps}
+          \label{fig:CH2_topAS_rec_fps}
     \end{subfigure}
     \caption{Impact of new year holidays on flow rate of academic and business traffic}
     \label{fig:flowrate_topAS_rec_BCH_CH}
 \end{figure}
+
+
+
 
 \subsection{Discussion}
 
@@ -365,11 +368,111 @@ In We do sampling over two different weeks, one in Dec long away from new year h
 Due to the COVID19 pandemic, traffic in terms of bytes dropped by almost one-third, whereas overall flows dropped by almost half. This difference in observation could be due to the nature of flows. A flow is a unidirectional sequence of packets that contains among other things an ingress interface, IP protocol, source and destination IP addresses, source and destination ports and type of service. While flows require an ingress interface and a request initiating a flow, traffic in bytes may just be machine-to-machine. This is further supported by similar trends during the Christmas/NYE holidays.
 
 \subsection{Academic and Business Traffic}
+\begin{figure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/BCO2_acaBus_bps.png}
+          \caption{Data-rate before COVID-19 pandemic}
+          \label{fig:BCH2_acaBus_bps}
+    \end{subfigure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/CO2_acaBus_bps.png}
+          \caption{Data-rate during COVID-19 pandemic}
+          \label{fig:CO2_acaBus_bps}
+    \end{subfigure}
+    \caption{Impact of COVID-19 pandemic on data rate of academic and business traffic}
+    \label{fig:datarate_acaBus_BCO_CO}
+\end{figure}
 
+\begin{figure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/BCO2_acaBus_fps.png}
+          \caption{Flow-rate before COVID-19 pandemic}
+          \label{fig:BCO2_acaBus_fps}
+    \end{subfigure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/CO2_acaBus_fps.png}
+          \caption{Flow-rate during COVID-19 pandemic}
+          \label{fig:CO2_acaBus_fps}
+    \end{subfigure}
+    \caption{Impact of COVID-19 pandemic on flow rate of academic and business traffic}
+    \label{fig:flowrate_acaBus_BCO_CO}
+\end{figure}
 \subsection{NRENs Traffic}
 
 \subsection{Top ASes}
 
+\begin{figure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/BCO2_top14AS_generating_bps.png}
+          \caption{Top 14 ASes generating traffic before COVID-19 pandemic}
+          \label{fig:BCO2_topAS_gen_bps}
+    \end{subfigure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/CO2_top14AS_generating_bps.png}
+          \caption{Top 14 ASes generating traffic during COVID-19 pandemic}
+          \label{fig:CO2_topAS_gen_bps}
+    \end{subfigure}
+    \caption{Impact of COVID-19 pandemic on data rate of academic and business traffic}
+    \label{fig:topAS_gen_BCO_CO}
+\end{figure}
+
+\begin{figure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/BCO2_top14AS_generating_fps.png}
+          \caption{Top 14 ASes generating flow before COVID-19 pandemic}
+          \label{fig:BCO2_topAS_gen_fps}
+    \end{subfigure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/CO2_top14AS_generating_fps.png}
+          \caption{Top 14 ASes generating flow during COVID-19 pandemic}
+          \label{fig:Co2_topAS_gen_fps}
+    \end{subfigure}
+    \caption{Impact of COVID-19 pandemic on flow rate of academic and business traffic}
+    \label{fig:flowrate_topAS_gen_BCO_CO}
+\end{figure}
+
+
+\begin{figure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/BCO2_top14AS_recieving_bps.png}
+          \caption{Top 14 ASes receiving traffic before COVID-19 pandemic}
+          \label{fig:BCO2_topAS_rec_bps}
+    \end{subfigure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/CO2_top14AS_recieving_bps.png}
+          \caption{Top 14 ASes receiving traffic during COVID-19 pandemic}
+          \label{fig:CO2_topAS_rec_bps}
+    \end{subfigure}
+    \caption{Impact of COVID-19 pandemic on data rate of academic and business traffic}
+    \label{fig:topAS_rec_BCO_CO}
+\end{figure}
+
+\begin{figure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/BCO2_top14AS_recieving_fps.png}
+          \caption{Top 14 ASes receiving flow before COVID-19 pandemic}
+          \label{fig:BCO2_topAS_rec_fps}
+    \end{subfigure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/CO2_top14AS_recieving_fps.png}
+          \caption{Top 14 ASes receiving flow during COVID-19 pandemic}
+          \label{fig:CO2_topAS_rec_fps}
+    \end{subfigure}
+    \caption{Impact of COVID-19 pandemic on flow rate of academic and business traffic}
+    \label{fig:flowrate_topAS_rec_BCO_CO}
+\end{figure}
 \subsection{Discussion}
 
 \section{Comparing Covid-19 and New Year Holidays impact on GEANT}
