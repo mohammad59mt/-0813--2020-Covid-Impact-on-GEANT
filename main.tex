@@ -206,10 +206,9 @@ DATA-SET WE USED.
 A BRIEF POINT TO OUR FINDINGS.
 
 \section{Impact of New Year Holidays on GEANT}
-In this section, we look into the impact of 'new year holidays' on the GEANT traffic pattern. To this end, we do sampling over two different time-periods, one in Dec long away from new year holidays (2019/12/09 - 2019/12/15) and the other one during new year holidays (2019/12/30 - 2020/01/05). We first analyse the total traffic throughput in terms of byte per second (bps) and flow per second (fps). Thereafter, we break-down the traffic into its academic and business elements and their pattern during the week. After that, the top NRENs generating and receiving traffic is discussed to investigate the impact of new year holidays on top NRENs pattern. The same process is followed for top ASes generating and receiving traffic.
+In this section, we look into the impact of 'new year holidays' on the GEANT traffic pattern. To this end, we do sampling over two different time-periods, one in Dec long away from new year holidays (2019/12/09 - 2019/12/15) and the other one during new year holidays (2019/12/30 - 2020/01/05). For the sake of simplicity, we refer to the first period as ordinary week. We first analyse the total traffic throughput in terms of byte per second (bps) and flow per second (fps). Thereafter, we break-down the traffic into its academic and business elements and their pattern during the week. After that, the top NRENs generating and receiving traffic is discussed to investigate the impact of new year holidays on top NRENs pattern. The same story is built for top ASes generating and receiving traffic.
 
 \subsection{Total Traffic Throughput}
-Fig.~\ref{fig:datarate_BCH_CH} show the impact of new year holidays on the total data rate throughput. There is an evident pattern during the week long before new year holidays. From midnight
 \begin{figure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
@@ -226,6 +225,7 @@ Fig.~\ref{fig:datarate_BCH_CH} show the impact of new year holidays on the total
     \caption{Impact of new year holidays on data rate}
     \label{fig:datarate_BCH_CH}
 \end{figure}
+Fig.~\ref{fig:datarate_BCH_CH} show the impact of new year holidays on the total data rate throughput. There is an evident pattern during the week long before new year holidays. Total network throughput is between ~55 and ~110 Gbps during working days of ordinary week, however, it fluctuates between ~50 and ~80 Gbps during new year holidays. This means that data-rate had been reduced by ~30$\%$ during new year holidays except weekend. Although the data-rate pattern at the weekend had a significant change, the overall data communicated during the weekend had not been changed significantly.
 
 \begin{figure}
     \begin{subfigure}{\linearFigSze\textwidth}
@@ -243,15 +243,28 @@ Fig.~\ref{fig:datarate_BCH_CH} show the impact of new year holidays on the total
     \caption{Impact of new year holidays on flow rate}
     \label{fig:flowrate_BCH_CH}
 \end{figure}
+Fig.~\ref{fig:BCH2_fps} illustrate network throughput in term of flow per second during an ordinary week and new year holidays. The number of flow per second traversing GEANT network infrastructure during ordinary working days is typically between 4.7~kfps and 40~kfps. The upper bound reduces to 15~kfps over the weekend.The number of flows traversing the network is highly related to the time-of-day and day-of-week. During the night, the network conveys the lowest number of flows. 
+On the other hand, during the new year holidays the number of flows reduces notably and stays between 4~kfps and 14~kfps. Flow throughput on the day of new year not only has a significant reduction but also has a shift towards night-time usage (this is more clear in Fig.~\ref{fig:BCH2_CH2_hourly_fps}). This shows that there are many new flows traversing GEANT network after mid-night of new year. The new flows enter the network after mid-night and leaves the network before 6am. On the new year day, the night-time flow throughput is comparable to day-light-time.
 
 \begin{figure}
     \centering
-    \includegraphics[width=\columnwidth]{img/BCH2_CH2_hourly_compare.png}
+    \includegraphics[width=\columnwidth]{img/BCH2_CH2_hourly_compare_bps.png}
     \caption{Impact of new year holidays on traffic data-rate pattern}
-    \label{fig:my_label}
+    \label{fig:BCH2_CH2_hourly_bps}
 \end{figure}
+In Fig.~\ref{fig:BCH2_CH2_hourly_bps}, the impact of new year holidays on hourly pattern of data-rate during different days is investigated. There is an evident change of pattern during new year holidays. During ordinary working days, the data throughput is highly related to time-of-day and it shows a significant reduction after mid-night. The dependence to the time-of-day decreases during ordinary weekend, however, there is still a significant reduction at 4am. On the other hand, during new year holidays data-rate pattern is highly independent of time-of-day, especially during new year day and week-ends.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{img/BCH2_CH2_hourly_compare_fps.png}
+    \caption{Impact of new year holidays on traffic flow-rate pattern}
+    \label{fig:BCH2_CH2_hourly_fps}
+\end{figure}
+Fig.~\ref{fig:BCH2_CH2_hourly_fps} compares the flow throughput pattern long before and during new year holidays. There is a clear pattern on the number of flows traversing the network on working days. Not only the pattern but also the upper and lower band is common during ordinary working days. Keeping the day of new year and the day before that, new year holidays mostly causes a significant reduction on the number of flows traversing the network but the pattern of flow throughput is almost the same as before. 
 
 \subsection{Academic and Business Traffic}
+In this part, we break down the traffic into its academic and business elements. To this end, we label the flows by their source and destination ASes. If an AS belongs to GEANT customer corn, it is considered as an academic AS, otherwise, it is considered as a business AS. For the sake of simplicity, in the following plots, if a flow is originated by an academic AS and destined to another academic AS we call it Academic-to-Academic (A2A) flow. Similarly, B2B, A2B, and B2A are abbreviations for Business-to-Business, Academic-to-Business, and Business-to-Academic flows, respectively.
+
 \begin{figure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
@@ -268,6 +281,7 @@ Fig.~\ref{fig:datarate_BCH_CH} show the impact of new year holidays on the total
     \caption{Impact of new year holidays on data rate of academic and business traffic}
     \label{fig:datarate_acaBus_BCH_CH}
 \end{figure}
+Fig.~\ref{fig:datarate_acaBus_BCH_CH} illustrate the data-rate pattern of Academic-to-Academic, Business-to-Business, Academic-to-Business, and Business-to-Academic traffic during an ordinary week and new year holidays. During working days, traffics originating from business ASes are more predictable comparing those originating from Academic ASes. This shows that 
 
 \begin{figure}
     \begin{subfigure}{\linearFigSze\textwidth}
@@ -369,6 +383,40 @@ Fig.~\ref{fig:datarate_BCH_CH} show the impact of new year holidays on the total
 
 \subsection{Total Traffic Throughput}
 Due to the COVID19 pandemic, traffic in terms of bytes dropped by almost one-third, whereas overall flows dropped by almost half. This difference in observation could be due to the nature of flows. A flow is a unidirectional sequence of packets that contains among other things an ingress interface, IP protocol, source and destination IP addresses, source and destination ports and type of service. While flows require an ingress interface and a request initiating a flow, traffic in bytes may just be machine-to-machine. This is further supported by similar trends during the Christmas/NYE holidays.
+
+\begin{figure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/BCO2_byterate.png}
+          \caption{Data-rate before COVID-19 pandemic}
+          \label{fig:BCO2_bps}
+    \end{subfigure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/CO2_byterate.png}
+          \caption{Data-rate during COVID-19 pandemic}
+          \label{fig:CO2_bps}
+    \end{subfigure}
+    \caption{Impact of COVID-19 pandemic on data rate}
+    \label{fig:datarate_BCO_CO}
+\end{figure}
+
+\begin{figure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/BCO2_flowrate.png}
+          \caption{Flow-rate before COVID-19 pandemic}
+          \label{fig:BCO2_fps}
+    \end{subfigure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/CO2_flowrate.png}
+          \caption{Flow-rate during COVID-19 pandemic}
+          \label{fig:CO2_fps}
+    \end{subfigure}
+    \caption{Impact of COVID-19 pandemic on flow rate}
+    \label{fig:flowrate_BCO_CO}
+\end{figure}
 
 \subsection{Academic and Business Traffic}
 \begin{figure}
