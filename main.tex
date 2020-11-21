@@ -205,6 +205,29 @@ DATA-SET WE USED.
 
 A BRIEF POINT TO OUR FINDINGS.
 
+\section{Impact of weekends on GEANT}
+In this section, we compare the traffic pattern during working days and weekends. To this end, we observe network traffic for sixteen weeks. On every day, the average traffic per hour is collected and the median of all data collected during these sixteen weeks is considered as the Representative. To remove the impact of special event, e.g., Christmas and new year holidays, non-consecutive weeks are selected. The investigated dates are 2019/11/04-2019/12/22 and 2020/01/20-2020/03/22.
+\subsection{Total Traffic Throughput}
+\begin{figure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/OW_byterate.png}
+          \caption{Data-rate}
+          \label{fig:OW_bps}
+    \end{subfigure}
+    \begin{subfigure}{\linearFigSze\textwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/OW_flowrate.png}
+          \caption{Flow-rate}
+          \label{fig:OW_bps}
+    \end{subfigure}
+    \caption{Median of observed traffic pattern during 16 weeks}
+    \label{fig:OW_bps_fps}
+\end{figure}
+If Fig.~\ref{fig:OW_bps_fps}, the impact of weekends on the traffic pattern is illustrated. Fig.~\ref{fig:OW_bps} shows median of data-rate during sixteen different weeks. Based on our observation, has a significant reduction at weekends. On the other hand, during working days, there is a mild change in data-rate. Starting from Monday, it has an smooth increasing trend until Wednesday where the highest amount of data-rate is reported on. Starting from Wednesday, there is an smooth decreasing trend until Friday. 
+
+\subsection{Academic and Business Traffic}
+
 \section{Impact of New Year Holidays on GEANT}
 In this section, we look into the impact of 'new year holidays' on the GEANT traffic pattern. To this end, we do sampling over two different time-periods, one in Dec long away from new year holidays (2019/12/09 - 2019/12/15) and the other one during new year holidays (2019/12/30 - 2020/01/05). For the sake of simplicity, we refer to the first period as ordinary week. We first analyse the total traffic throughput in terms of byte per second (bps) and flow per second (fps). Thereafter, we break-down the traffic into its academic and business elements and their pattern during the week. After that, the top NRENs generating and receiving traffic is discussed to investigate the impact of new year holidays on top NRENs pattern. The same story is built for top ASes generating and receiving traffic.
 
