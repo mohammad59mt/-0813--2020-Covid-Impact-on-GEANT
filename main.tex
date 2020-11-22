@@ -240,15 +240,15 @@ In this section, we look into the impact of 'new year holidays' on the GEANT tra
 \begin{figure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/BCH2_byterate.png}
+          \includegraphics[width=\columnwidth]{img/BCH_byterate.png}
           \caption{Data-rate before new year holidays}
-          \label{fig:BCH2_bps}
+          \label{fig:BCH_bps}
     \end{subfigure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/CH2_byterate.png}
+          \includegraphics[width=\columnwidth]{img/CH_byterate.png}
           \caption{Data-rate during new year holidays}
-          \label{fig:CH2_bps}
+          \label{fig:CH_bps}
     \end{subfigure}
     \caption{Impact of new year holidays on data rate}
     \label{fig:datarate_BCH_CH}
@@ -258,20 +258,20 @@ Fig.~\ref{fig:datarate_BCH_CH} show the impact of new year holidays on the total
 \begin{figure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/BCH2_flowrate.png}
+          \includegraphics[width=\columnwidth]{img/BCH_flowrate.png}
           \caption{Flow-rate before new year holidays}
-          \label{fig:BCH2_fps}
+          \label{fig:BCH_fps}
     \end{subfigure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/CH2_flowrate.png}
+          \includegraphics[width=\columnwidth]{img/CH_flowrate.png}
           \caption{Flow-rate during new year holidays}
-          \label{fig:CH2_fps}
+          \label{fig:CH_fps}
     \end{subfigure}
     \caption{Impact of new year holidays on flow rate}
     \label{fig:flowrate_BCH_CH}
 \end{figure}
-Fig.~\ref{fig:BCH2_fps} illustrate network throughput in term of flow per second during an ordinary week and new year holidays. The number of flow per second traversing GEANT network infrastructure during ordinary working days is typically between 4.7~kfps and 40~kfps. The upper bound reduces to 15~kfps over the weekend.The number of flows traversing the network is highly related to the time-of-day and day-of-week. During the night, the network conveys the lowest number of flows. 
+Fig.~\ref{fig:BCH_fps} illustrate network throughput in term of flow per second during an ordinary week and new year holidays. The number of flow per second traversing GEANT network infrastructure during ordinary working days is typically between 4.7~kfps and 40~kfps. The upper bound reduces to 15~kfps over the weekend.The number of flows traversing the network is highly related to the time-of-day and day-of-week. During the night, the network conveys the lowest number of flows. 
 On the other hand, during the new year holidays the number of flows reduces notably and stays between 4~kfps and 14~kfps. Flow throughput on the day of new year not only has a significant reduction but also has a shift towards night-time usage (this is more clear in Fig.~\ref{fig:BCH2_CH2_hourly_fps}). This shows that there are many new flows traversing GEANT network after mid-night of new year. The new flows enter the network after mid-night and leaves the network before 6am. On the new year day, the night-time flow throughput is comparable to day-light-time.
 
 \begin{figure}
@@ -284,7 +284,7 @@ In Fig.~\ref{fig:BCH2_CH2_hourly_bps}, the impact of new year holidays on hourly
 
 \begin{figure}
     \centering
-    \includegraphics[width=\columnwidth]{img/BCH2_CH2_hourly_compare_fps.png}
+    \includegraphics[width=\columnwidth]{img/BCH2_CH_hourly_compare_fps.png}
     \caption{Impact of new year holidays on traffic flow-rate pattern}
     \label{fig:BCH2_CH2_hourly_fps}
 \end{figure}
@@ -296,15 +296,15 @@ In this part, we break down the traffic into its academic and business elements.
 \begin{figure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/BCH2_acaBus_bps.png}
+          \includegraphics[width=\columnwidth]{img/BCH_acaBus_bps.png}
           \caption{Data-rate before new year holidays}
-          \label{fig:BCH2_acaBus_bps}
+          \label{fig:BCH_acaBus_bps}
     \end{subfigure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/CH2_acaBus_bps.png}
+          \includegraphics[width=\columnwidth]{img/CH_acaBus_bps.png}
           \caption{Data-rate during new year holidays}
-          \label{fig:CH2_acaBus_bps}
+          \label{fig:CH_acaBus_bps}
     \end{subfigure}
     \caption{Impact of new year holidays on data rate of academic and business traffic}
     \label{fig:datarate_acaBus_BCH_CH}
@@ -314,15 +314,15 @@ Fig.~\ref{fig:datarate_acaBus_BCH_CH} illustrate the data-rate pattern of Academ
 \begin{figure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/BCH2_acaBus_fps.png}
+          \includegraphics[width=\columnwidth]{img/BCH_acaBus_fps.png}
           \caption{Flow-rate before new year holidays}
-          \label{fig:BCH2_acaBus_fps}
+          \label{fig:BCH_acaBus_fps}
     \end{subfigure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/CH2_acaBus_fps.png}
+          \includegraphics[width=\columnwidth]{img/CH_acaBus_fps.png}
           \caption{Flow-rate during new year holidays}
-          \label{fig:CH2_acaBus_fps}
+          \label{fig:CH_acaBus_fps}
     \end{subfigure}
     \caption{Impact of new year holidays on flow rate of academic and business traffic}
     \label{fig:flowrate_acaBus_BCH_CH}
@@ -415,15 +415,15 @@ Due to the COVID19 pandemic, traffic in terms of bytes dropped by almost one-thi
 \begin{figure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/BCO2_byterate.png}
+          \includegraphics[width=\columnwidth]{img/BCO_byterate.png}
           \caption{Data-rate before COVID-19 pandemic}
-          \label{fig:BCO2_bps}
+          \label{fig:BCO_bps}
     \end{subfigure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/CO2_byterate.png}
+          \includegraphics[width=\columnwidth]{img/CO_byterate.png}
           \caption{Data-rate during COVID-19 pandemic}
-          \label{fig:CO2_bps}
+          \label{fig:CO_bps}
     \end{subfigure}
     \caption{Impact of COVID-19 pandemic on data rate}
     \label{fig:datarate_BCO_CO}
@@ -432,15 +432,15 @@ Due to the COVID19 pandemic, traffic in terms of bytes dropped by almost one-thi
 \begin{figure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/BCO2_flowrate.png}
+          \includegraphics[width=\columnwidth]{img/BCO_flowrate.png}
           \caption{Flow-rate before COVID-19 pandemic}
-          \label{fig:BCO2_fps}
+          \label{fig:BCO_fps}
     \end{subfigure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/CO2_flowrate.png}
+          \includegraphics[width=\columnwidth]{img/CO_flowrate.png}
           \caption{Flow-rate during COVID-19 pandemic}
-          \label{fig:CO2_fps}
+          \label{fig:CO_fps}
     \end{subfigure}
     \caption{Impact of COVID-19 pandemic on flow rate}
     \label{fig:flowrate_BCO_CO}
@@ -450,15 +450,15 @@ Due to the COVID19 pandemic, traffic in terms of bytes dropped by almost one-thi
 \begin{figure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/BCO2_acaBus_bps.png}
+          \includegraphics[width=\columnwidth]{img/BCO_acaBus_bps.png}
           \caption{Data-rate before COVID-19 pandemic}
-          \label{fig:BCO2_acaBus_bps}
+          \label{fig:BCO_acaBus_bps}
     \end{subfigure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/CO2_acaBus_bps.png}
+          \includegraphics[width=\columnwidth]{img/CO_acaBus_bps.png}
           \caption{Data-rate during COVID-19 pandemic}
-          \label{fig:CO2_acaBus_bps}
+          \label{fig:CO_acaBus_bps}
     \end{subfigure}
     \caption{Impact of COVID-19 pandemic on data rate of academic and business traffic}
     \label{fig:datarate_acaBus_BCO_CO}
@@ -467,15 +467,15 @@ Due to the COVID19 pandemic, traffic in terms of bytes dropped by almost one-thi
 \begin{figure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/BCO2_acaBus_fps.png}
+          \includegraphics[width=\columnwidth]{img/BCO_acaBus_fps.png}
           \caption{Flow-rate before COVID-19 pandemic}
-          \label{fig:BCO2_acaBus_fps}
+          \label{fig:BCO_acaBus_fps}
     \end{subfigure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/CO2_acaBus_fps.png}
+          \includegraphics[width=\columnwidth]{img/CO_acaBus_fps.png}
           \caption{Flow-rate during COVID-19 pandemic}
-          \label{fig:CO2_acaBus_fps}
+          \label{fig:CO_acaBus_fps}
     \end{subfigure}
     \caption{Impact of COVID-19 pandemic on flow rate of academic and business traffic}
     \label{fig:flowrate_acaBus_BCO_CO}
