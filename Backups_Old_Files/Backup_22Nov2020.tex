@@ -3,11 +3,29 @@
 %\documentclass[10pt,journal,onecolumn]{IEEEtran}
 %\documentclass[10pt,journal,compsoc]{IEEEtran}
 \documentclass[10pt, journal, letterpaper]{IEEEtran}
+%\documentclass[10pt,journal,compsoc]{IEEEtran}
 
 
 % NB hyperref package may need to be commented for Latex upload
 \usepackage{cite}
+%\ifCLASSOPTIONcompsoc
+%\ifCLASSINFOpdf
+% \usepackage[pdftex]{graphicx}
+% declare the path(s) where your graphic files are
+% \graphicspath{{../pdf/}{../jpeg/}}
+% and their extensions so you won't have to specify these with
+% every instance of \includegraphics
+% \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+%  \usepackage[nocompress]{cite}
+%  \else
+% normal IEEE
+%  \usepackage{cite}
+%  \fi
 
+%  \ifCLASSINFOpdf
+
+%  \else
+%\fi
 %important package
 \usepackage{multirow} 
 \usepackage{algpseudocode}
@@ -89,6 +107,59 @@
 \colorlet{BLUE}{blue}
 \usepackage{colortbl}
 \definecolor{LightCyan}{RGB}{155, 227, 247}
+%\captionsetup[figure]{belowskip=-8pt}
+%in test
+
+%\usepackage{nomencl}
+%\makenomenclature
+%% This code creates the groups
+% -----------------------------------------
+%\usepackage{etoolbox}
+%\renewcommand\nomgroup[1]{%
+%	\item[\bfseries
+%	\ifstrequal{#1}{P}{Parameters}{%
+%		\ifstrequal{#1}{V}{Variables}{%
+%			\ifstrequal{#1}{I}{Indices}{%
+%				\ifstrequal{#1}{B}{Binary~Variables}{}}}}%
+%	]}
+
+%DOUBLE QUOTATION COMMAND
+\newcommand{\dq}[1]{``#1''}
+
+% To remove all comments, comment out the definition and use the commented-out
+% empty definition below
+% otherwise you can comment the line \commentsontrue 
+\newcommand{\commentBy}[3]{\textcolor{#1}{\textbf{#2:} #3}}
+%\newcommand{\commentBy}[3]{\ignorespaces}
+
+\newif\ifcommentson
+%uncomment the line below to show comments
+\commentsontrue
+
+\newcommand{\ste}[1]{\ifcommentson \commentBy{blue}{SS}{#1} \fi}
+%\newcommand{\lc}[1]{\ifcommentson \commentBy{blue}{LC}{#1} \fi}
+\newcommand{\mm}[1]{\ifcommentson \commentBy{orange}{MM}{#1} \fi}
+
+\newif\ifextended
+\newif\ifshortver
+
+%%% Show only short version in black
+%%%        \shorvetrue 
+%%%        %\extendedtrue 
+
+%%% Show only extended version in black
+%%%        %\shorvetrue 
+%%%        \extendedtrue 
+
+%%% Show short version in blue and extended version in purple
+%%%        \shorvetrue 
+%%%        \extendedtrue 
+
+\shortvertrue
+%\extendedtrue
+
+\newcommand{\extended}[1]{\ifextended \ifshortver \textcolor{purple}{#1} \else \textcolor{black}{#1} \fi  \fi}
+\newcommand{\shortver}[1]{\ifshortver \ifextended \textcolor{blue}{#1} \else \textcolor{black}{#1} \fi \fi}
 
 %\newcommand{\optional}[1]{#1}
 %\newcommand{\optional}[1]{\textcolor{Orange}{#1}}
@@ -161,7 +232,7 @@ Fig.~\ref{fig:OW_fps} represented the number of flows in the network. Our data s
 \subsection{Academic and Business Traffic}
 
 \section{Impact of New Year Holidays on GEANT}
-In this section, we look into the impact of 'new year holidays' on the GEANT traffic pattern. To this end, we do sampling over two different time-periods, one in Dec long away from new year holidays (2019/11/04 - 2019/12/22) and the other one during new year holidays (2019/12/30 - 2020/01/05). In order to be able to compare these two periods, the data sampled during 2019/11/04-2019/12/22 has been mapped to a one week period by considering the median of values observed during similar 'day of week' and 'time of day'. For the sake of simplicity, we refer to this period as ordinary week. We first analyse the total traffic throughput in terms of byte per second (bps) and flow per second (fps). Thereafter, we break-down the traffic into its academic and business elements and their pattern during the week. After that, the top NRENs generating and receiving traffic is discussed to investigate the impact of new year holidays on top NRENs pattern. The same story is built for top ASes generating and receiving traffic.
+In this section, we look into the impact of 'new year holidays' on the GEANT traffic pattern. To this end, we do sampling over two different time-periods, one in Dec long away from new year holidays (2019/12/09 - 2019/12/15) and the other one during new year holidays (2019/12/30 - 2020/01/05). For the sake of simplicity, we refer to the first period as ordinary week. We first analyse the total traffic throughput in terms of byte per second (bps) and flow per second (fps). Thereafter, we break-down the traffic into its academic and business elements and their pattern during the week. After that, the top NRENs generating and receiving traffic is discussed to investigate the impact of new year holidays on top NRENs pattern. The same story is built for top ASes generating and receiving traffic.
 
 \subsection{Total Traffic Throughput}
 \begin{figure}
@@ -173,7 +244,7 @@ In this section, we look into the impact of 'new year holidays' on the GEANT tra
     \end{subfigure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/CH2_byterate.png}
+          \includegraphics[width=\columnwidth]{img/CH_byterate.png}
           \caption{Data-rate during new year holidays}
           \label{fig:CH_bps}
     \end{subfigure}
@@ -191,31 +262,31 @@ Fig.~\ref{fig:datarate_BCH_CH} show the impact of new year holidays on the total
     \end{subfigure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/CH2_flowrate.png}
+          \includegraphics[width=\columnwidth]{img/CH_flowrate.png}
           \caption{Flow-rate during new year holidays}
           \label{fig:CH_fps}
     \end{subfigure}
     \caption{Impact of new year holidays on flow rate}
     \label{fig:flowrate_BCH_CH}
 \end{figure}
-Fig.~\ref{fig:BCH_fps} illustrate network throughput in term of flow per second during the ordinary week and new year holidays. The number of flows per second traversing GEANT network infrastructure during ordinary working days is typically between 4.7~kfps and 40~kfps. The upper bound reduces to 15~kfps over the weekend.The number of flows traversing the network is highly related to the time-of-day and day-of-week. During the night, the network conveys the lowest number of flows. 
-On the other hand, during the new year holidays the number of flows reduces notably and stays between 4~kfps and 14~kfps. Flow throughput on the day of new year not only has a significant reduction but also has a shift towards night-time usage (this is more clear in Fig.~\ref{fig:OW2_CH2_hourly_fps}). This shows that there are many new flows traversing GEANT network after mid-night of new year. The new flows enter the network after mid-night and leaves the network before 6am. On the new year day, the night-time flow throughput is comparable to day-light-time.
+Fig.~\ref{fig:BCH_fps} illustrate network throughput in term of flow per second during an ordinary week and new year holidays. The number of flow per second traversing GEANT network infrastructure during ordinary working days is typically between 4.7~kfps and 40~kfps. The upper bound reduces to 15~kfps over the weekend.The number of flows traversing the network is highly related to the time-of-day and day-of-week. During the night, the network conveys the lowest number of flows. 
+On the other hand, during the new year holidays the number of flows reduces notably and stays between 4~kfps and 14~kfps. Flow throughput on the day of new year not only has a significant reduction but also has a shift towards night-time usage (this is more clear in Fig.~\ref{fig:BCH2_CH2_hourly_fps}). This shows that there are many new flows traversing GEANT network after mid-night of new year. The new flows enter the network after mid-night and leaves the network before 6am. On the new year day, the night-time flow throughput is comparable to day-light-time.
 
 \begin{figure}
     \centering
-    \includegraphics[width=\columnwidth]{img/OW_CH2_hourly_compare_bps.png}
+    \includegraphics[width=\columnwidth]{img/BCH2_CH2_hourly_compare_bps.png}
     \caption{Impact of new year holidays on traffic data-rate pattern}
-    \label{fig:OW_CH2_hourly_bps}
+    \label{fig:BCH2_CH2_hourly_bps}
 \end{figure}
-In Fig.~\ref{fig:OW_CH2_hourly_bps}, the impact of new year holidays on hourly pattern of data-rate during different days is investigated. There is an evident change of pattern during new year holidays. During ordinary working days, the data throughput is highly related to time-of-day and it shows a significant reduction after mid-night. The dependence to the time-of-day decreases during ordinary weekend, however, there is still a significant reduction at 4am. On the other hand, during new year holidays data-rate pattern is highly independent of time-of-day, especially during new year day and week-ends.
+In Fig.~\ref{fig:BCH2_CH2_hourly_bps}, the impact of new year holidays on hourly pattern of data-rate during different days is investigated. There is an evident change of pattern during new year holidays. During ordinary working days, the data throughput is highly related to time-of-day and it shows a significant reduction after mid-night. The dependence to the time-of-day decreases during ordinary weekend, however, there is still a significant reduction at 4am. On the other hand, during new year holidays data-rate pattern is highly independent of time-of-day, especially during new year day and week-ends.
 
 \begin{figure}
     \centering
-    \includegraphics[width=\columnwidth]{img/OW_CH2_hourly_compare_fps.png}
+    \includegraphics[width=\columnwidth]{img/BCH2_CH_hourly_compare_fps.png}
     \caption{Impact of new year holidays on traffic flow-rate pattern}
-    \label{fig:OW_CH2_hourly_fps}
+    \label{fig:BCH2_CH2_hourly_fps}
 \end{figure}
-Fig.~\ref{fig:OW_CH2_hourly_fps} compares the flow throughput pattern long before and during new year holidays. There is a clear pattern on the number of flows traversing the network on working days. Not only the pattern but also the upper and lower band is common during ordinary working days. Keeping the day of new year and the day before that, new year holidays mostly causes a significant reduction on the number of flows traversing the network but the pattern of flow throughput is almost the same as before. 
+Fig.~\ref{fig:BCH2_CH2_hourly_fps} compares the flow throughput pattern long before and during new year holidays. There is a clear pattern on the number of flows traversing the network on working days. Not only the pattern but also the upper and lower band is common during ordinary working days. Keeping the day of new year and the day before that, new year holidays mostly causes a significant reduction on the number of flows traversing the network but the pattern of flow throughput is almost the same as before. 
 
 \subsection{Academic and Business Traffic}
 In this part, we break down the traffic into its academic and business elements. To this end, we label the flows by their source and destination ASes. If an AS belongs to GEANT customer corn, it is considered as an academic AS, otherwise, it is considered as a business AS. For the sake of simplicity, in the following plots, if a flow is originated by an academic AS and destined to another academic AS we call it Academic-to-Academic (A2A) flow. Similarly, B2B, A2B, and B2A are abbreviations for Business-to-Business, Academic-to-Business, and Business-to-Academic flows, respectively.
@@ -229,7 +300,7 @@ In this part, we break down the traffic into its academic and business elements.
     \end{subfigure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/CH2_acaBus_bps.png}
+          \includegraphics[width=\columnwidth]{img/CH_acaBus_bps.png}
           \caption{Data-rate during new year holidays}
           \label{fig:CH_acaBus_bps}
     \end{subfigure}
@@ -247,7 +318,7 @@ Fig.~\ref{fig:datarate_acaBus_BCH_CH} illustrate the data-rate pattern of Academ
     \end{subfigure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/CH2_acaBus_fps.png}
+          \includegraphics[width=\columnwidth]{img/CH_acaBus_fps.png}
           \caption{Flow-rate during new year holidays}
           \label{fig:CH_acaBus_fps}
     \end{subfigure}
@@ -348,7 +419,7 @@ Due to the COVID19 pandemic, traffic in terms of bytes dropped by almost one-thi
     \end{subfigure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/CO2_byterate.png}
+          \includegraphics[width=\columnwidth]{img/CO_byterate.png}
           \caption{Data-rate during COVID-19 pandemic}
           \label{fig:CO_bps}
     \end{subfigure}
@@ -365,7 +436,7 @@ Due to the COVID19 pandemic, traffic in terms of bytes dropped by almost one-thi
     \end{subfigure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/CO2_flowrate.png}
+          \includegraphics[width=\columnwidth]{img/CO_flowrate.png}
           \caption{Flow-rate during COVID-19 pandemic}
           \label{fig:CO_fps}
     \end{subfigure}
@@ -383,7 +454,7 @@ Due to the COVID19 pandemic, traffic in terms of bytes dropped by almost one-thi
     \end{subfigure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/CO2_acaBus_bps.png}
+          \includegraphics[width=\columnwidth]{img/CO_acaBus_bps.png}
           \caption{Data-rate during COVID-19 pandemic}
           \label{fig:CO_acaBus_bps}
     \end{subfigure}
@@ -400,7 +471,7 @@ Due to the COVID19 pandemic, traffic in terms of bytes dropped by almost one-thi
     \end{subfigure}
     \begin{subfigure}{\linearFigSze\textwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/CO2_acaBus_fps.png}
+          \includegraphics[width=\columnwidth]{img/CO_acaBus_fps.png}
           \caption{Flow-rate during COVID-19 pandemic}
           \label{fig:CO_acaBus_fps}
     \end{subfigure}
