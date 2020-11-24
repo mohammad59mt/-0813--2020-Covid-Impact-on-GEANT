@@ -200,23 +200,23 @@ Fig.~\ref{fig:datarate_BCH_CH} show the impact of new year holidays on the total
     \label{fig:flowrate_BCH_CH}
 \end{figure}
 Fig.~\ref{fig:BCH_fps} illustrate network throughput in term of flow per second during the ordinary week and new year holidays. The number of flows per second traversing GEANT network infrastructure during ordinary working days is typically between 4.7~kfps and 40~kfps. The upper bound reduces to 15~kfps over the weekend.The number of flows traversing the network is highly related to the time-of-day and day-of-week. During the night, the network conveys the lowest number of flows. 
-On the other hand, during the new year holidays the number of flows reduces notably and stays between 4~kfps and 14~kfps. Flow throughput on the day of new year not only has a significant reduction but also has a shift towards night-time usage (this is more clear in Fig.~\ref{fig:OW_CH2_hourly_fps}). This shows that there are many new flows traversing GEANT network after mid-night of new year. The new flows enter the network after mid-night and leaves the network before 6am. On the new year day, the night-time flow throughput is comparable to day-light-time.
+On the other hand, during the new year holidays the number of flows reduces notably and stays between 4~kfps and 14~kfps. Flow throughput on the day of new year not only has a significant reduction but also has a shift towards night-time usage (this is more clear in Fig.~\ref{fig:BCH_CH2_hourly_fps}). This shows that there are many new flows traversing GEANT network after mid-night of new year. The new flows enter the network after mid-night and leaves the network before 6am. On the new year day, the night-time flow throughput is comparable to day-light-time.
 
 \begin{figure}
     \centering
-    \includegraphics[width=\columnwidth]{img/OWBC_CH2_hourly_compare_bps.png}
+    \includegraphics[width=\columnwidth]{img/BCH_CH2_hourly_compare_bps.png}
     \caption{Impact of new year holidays on traffic data-rate pattern}
-    \label{fig:OW_CH2_hourly_bps}
+    \label{fig:BCH_CH2_hourly_bps}
 \end{figure}
-In Fig.~\ref{fig:OW_CH2_hourly_bps}, the impact of new year holidays on hourly pattern of data-rate during different days is investigated. There is an evident change of pattern during new year holidays. During ordinary working days, the data throughput is highly related to time-of-day and it shows a significant reduction after mid-night. The dependence to the time-of-day decreases during ordinary weekend, however, there is still a significant reduction at 4am. On the other hand, during new year holidays data-rate pattern is highly independent of time-of-day, especially during new year day and week-ends.
+In Fig.~\ref{fig:BCH_CH2_hourly_bps}, the impact of new year holidays on hourly pattern of data-rate during different days is investigated. There is an evident change of pattern during new year holidays. During ordinary working days, the data throughput is highly related to time-of-day and it shows a significant reduction after mid-night. The dependence to the time-of-day decreases during ordinary weekend, however, there is still a significant reduction at 4am. On the other hand, during new year holidays data-rate pattern is highly independent of time-of-day, especially during new year day and week-ends.
 
 \begin{figure}
     \centering
-    \includegraphics[width=\columnwidth]{img/OWBC_CH2_hourly_compare_fps.png}
+    \includegraphics[width=\columnwidth]{img/BCH_CH2_hourly_compare_fps.png}
     \caption{Impact of new year holidays on traffic flow-rate pattern}
-    \label{fig:OW_CH2_hourly_fps}
+    \label{fig:BCH_CH2_hourly_fps}
 \end{figure}
-Fig.~\ref{fig:OW_CH2_hourly_fps} compares the flow throughput pattern long before and during new year holidays. There is a clear pattern on the number of flows traversing the network on working days. Not only the pattern but also the upper and lower band is common during ordinary working days. Keeping the day of new year and the day before that, new year holidays mostly causes a significant reduction on the number of flows traversing the network but the pattern of flow throughput is almost the same as before. 
+Fig.~\ref{fig:BCH_CH2_hourly_fps} compares the flow throughput pattern long before and during new year holidays. There is a clear pattern on the number of flows traversing the network on working days. Not only the pattern but also the upper and lower band is common during ordinary working days. Keeping the day of new year and the day before that, new year holidays mostly causes a significant reduction on the number of flows traversing the network but the pattern of flow throughput is almost the same as before. 
 
 \subsection{Academic and Business Traffic}
 In this part, we break down the traffic into its academic and business elements. To this end, we label the flows by their source and destination ASes. If an AS belongs to GEANT customer corn, it is considered as an academic AS, otherwise, it is considered as a business AS. For the sake of simplicity, in the following plots, if a flow is originated by an academic AS and destined to another academic AS we call it Academic-to-Academic (A2A) flow. Similarly, B2B, A2B, and B2A are abbreviations for Business-to-Business, Academic-to-Business, and Business-to-Academic flows, respectively.
