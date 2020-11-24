@@ -122,9 +122,10 @@
 %\date{October 2018}
 \maketitle	
 \begin{abstract}
+In this paper, the impact of weekends, new year holidays, and COVID-19 pandemic on GEANT network traffic is investigated. Our observation shows that 
 \end{abstract}	
 \begin{IEEEkeywords} 
-    Passive Network Monitoring;
+    Passive Network Monitoring, Traffic Break-Down, New Year Holidays Impact, Covid-19 Impact;
 \end{IEEEkeywords}
 
 \section{Introduction}
@@ -135,7 +136,7 @@ DATA-SET WE USED.
 A BRIEF POINT TO OUR FINDINGS.
 
 \section{Impact of weekends on GEANT}
-In this section, we compare the traffic pattern during working days and weekends. To this end, we observe network traffic for sixteen weeks. On every day, the average traffic per hour is collected and the median of all data collected during these sixteen weeks is considered as the Representative. To remove the impact of special event, e.g., Christmas and new year holidays, non-consecutive weeks are selected. The investigated dates are 2019/11/04-2019/12/22 and 2020/01/20-2020/03/22.
+In this section, we compare the traffic pattern during working days and weekends. To this end, we observe network traffic for fifteen weeks. On every day, the average traffic per hour is collected and the median of all data collected during these fifteen weeks is considered as the Representative. To remove the impact of special event, e.g., Christmas and new year holidays, non-consecutive weeks are selected. The investigated dates are 2019/11/04-2019/12/22 and 2020/01/20-2020/03/22.
 
 \subsection{Total Traffic Throughput}
 \begin{figure}
@@ -151,17 +152,17 @@ In this section, we compare the traffic pattern during working days and weekends
           \caption{Flow-rate}
           \label{fig:OW_fps}
     \end{subfigure}
-    \caption{Median of observed traffic pattern during 16 weeks}
+    \caption{Median of observed traffic pattern during 15 weeks}
     \label{fig:OW_bps_fps}
 \end{figure}
-If Fig.~\ref{fig:OW_bps_fps}, the impact of weekends on the traffic pattern is illustrated. Fig.~\ref{fig:OW_bps} shows median of data-rate during sixteen different weeks. Based on our observation, has a significant reduction at weekends. On the other hand, during working days, there is a mild change in data-rate. Starting from Monday, it has an smooth increasing trend until Wednesday where the highest amount of data-rate is reported on. Starting from Wednesday, there is an smooth decreasing trend until Friday. In total, data-rate during Monday to Thursday are next to each other while they are slightly higher than Friday.
+If Fig.~\ref{fig:OW_bps_fps}, the impact of weekends on the traffic pattern is illustrated. Fig.~\ref{fig:OW_bps} shows median of data-rate during fifteen different weeks. Based on our observation, has a significant reduction at weekends. On the other hand, during working days, there is a mild change in data-rate. Starting from Monday, it has an smooth increasing trend until Wednesday where the highest amount of data-rate is reported on. Starting from Wednesday, there is an smooth decreasing trend until Friday. In total, data-rate during Monday to Thursday are next to each other while they are slightly higher than Friday.
 
 Fig.~\ref{fig:OW_fps} represented the number of flows in the network. Our data shows that the number of observed flows is approximately the same during the first four working days. However, there is a mentionable decrease in the reported flow-rate on Friday which may be interpreted as people getting ready for weekends.
 
 \subsection{Academic and Business Traffic}
 
 \section{Impact of New Year Holidays on GEANT}
-In this section, we look into the impact of 'new year holidays' on the GEANT traffic pattern. To this end, we do sampling over two different time-periods, one in Dec long away from new year holidays (2019/11/04 - 2019/12/22) and the other one during new year holidays (2019/12/30 - 2020/01/05). In order to be able to compare these two periods, the data sampled during 2019/11/04-2019/12/22 has been mapped to a one week period by considering the median of values observed during similar 'day of week' and 'time of day'. For the sake of simplicity, we refer to this period as ordinary week. We first analyse the total traffic throughput in terms of byte per second (bps) and flow per second (fps). Thereafter, we break-down the traffic into its academic and business elements and their pattern during the week. After that, the top NRENs generating and receiving traffic is discussed to investigate the impact of new year holidays on top NRENs pattern. The same story is built for top ASes generating and receiving traffic.
+In this section, we look into the impact of 'new year holidays' on the GEANT traffic pattern. To this end, we do sampling over two different time-periods, one in Dec long away from new year holidays (2019/11/04 - 2019/12/22) and the other one during new year holidays (2019/12/30 - 2020/01/05). In order to be able to compare these two periods, the data sampled during 2019/11/04-2019/12/22 has been mapped to a one week period by considering the median of values observed during similar 'day of week' and 'time of day'. For the sake of simplicity, we refer to this period as ordinary week before Christmas. We first analyse the total traffic throughput in terms of byte per second (bps) and flow per second (fps). Thereafter, we break-down the traffic into its academic and business elements and their pattern during the week. After that, the top NRENs generating and receiving traffic is discussed to investigate the impact of new year holidays on top NRENs pattern. The same story is built for top ASes generating and receiving traffic.
 
 \subsection{Total Traffic Throughput}
 \begin{figure}
@@ -199,7 +200,7 @@ Fig.~\ref{fig:datarate_BCH_CH} show the impact of new year holidays on the total
     \label{fig:flowrate_BCH_CH}
 \end{figure}
 Fig.~\ref{fig:BCH_fps} illustrate network throughput in term of flow per second during the ordinary week and new year holidays. The number of flows per second traversing GEANT network infrastructure during ordinary working days is typically between 4.7~kfps and 40~kfps. The upper bound reduces to 15~kfps over the weekend.The number of flows traversing the network is highly related to the time-of-day and day-of-week. During the night, the network conveys the lowest number of flows. 
-On the other hand, during the new year holidays the number of flows reduces notably and stays between 4~kfps and 14~kfps. Flow throughput on the day of new year not only has a significant reduction but also has a shift towards night-time usage (this is more clear in Fig.~\ref{fig:OW2_CH2_hourly_fps}). This shows that there are many new flows traversing GEANT network after mid-night of new year. The new flows enter the network after mid-night and leaves the network before 6am. On the new year day, the night-time flow throughput is comparable to day-light-time.
+On the other hand, during the new year holidays the number of flows reduces notably and stays between 4~kfps and 14~kfps. Flow throughput on the day of new year not only has a significant reduction but also has a shift towards night-time usage (this is more clear in Fig.~\ref{fig:OW_CH2_hourly_fps}). This shows that there are many new flows traversing GEANT network after mid-night of new year. The new flows enter the network after mid-night and leaves the network before 6am. On the new year day, the night-time flow throughput is comparable to day-light-time.
 
 \begin{figure}
     \centering
@@ -335,6 +336,7 @@ Fig.~\ref{fig:datarate_acaBus_BCH_CH} illustrate the data-rate pattern of Academ
 
 
 \section{Impact of Covid-19 on GEANT}
+In this section, we look into the impact of 'Covid-19 pandemic' on GEANT traffic pattern. To this end, we do sampling over two different time-periods, one in January-February-March before Covid-19 pandemic in Europe (2020/01/20 - 2020/03/15) and the other one during the pandemic (2020/03/16 - 2020/03/22). In order to be able to compare these two periods, the data sampled during 2020/01/20-2020/03/15 has been mapped to a one week period by considering the median of values observed during similar 'day of week' and 'time of day'. For the sake of simplicity, we refer to this period as ordinary week before Covid-19 pandemic. We first analyse the total traffic throughput in terms of byte per second (bps) and flow per second (fps). Thereafter, we break-down the traffic into its academic and business elements and their pattern during the week. After that, the top NRENs generating and receiving traffic is discussed to investigate the impact of Covid-19 pandemic on top NRENs pattern. The same story is built for top ASes generating and receiving traffic.
 
 \subsection{Total Traffic Throughput}
 Due to the COVID19 pandemic, traffic in terms of bytes dropped by almost one-third, whereas overall flows dropped by almost half. This difference in observation could be due to the nature of flows. A flow is a unidirectional sequence of packets that contains among other things an ingress interface, IP protocol, source and destination IP addresses, source and destination ports and type of service. While flows require an ingress interface and a request initiating a flow, traffic in bytes may just be machine-to-machine. This is further supported by similar trends during the Christmas/NYE holidays.
