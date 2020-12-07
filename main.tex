@@ -193,72 +193,72 @@ Fig.~\ref{fig:OW_acaBus_fps} presents the number of flows traversing GEANT netwo
     \begin{subfigure}{\figSzeMahdi\columnwidth}
           \centering
           \includegraphics[width=\columnwidth]{img/OWD_top14AS_generating_bps.png}
-          \caption{Top 14 ASes generating traffic before new year holidays}
-          \label{fig:BCH2_topAS_gen_bps}
+          \caption{Top 14 ASes generating traffic during working days}
+          \label{fig:OWD_topAS_gen_bps}
     \end{subfigure}
     \begin{subfigure}{\figSzeMahdi\columnwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/}
-          \caption{Top 14 ASes generating traffic during new year holidays}
-          \label{fig:CH2_topAS_gen_bps}
+          \includegraphics[width=\columnwidth]{img/OWE_top14AS_generating_bps.png}
+          \caption{Top 14 ASes generating traffic during weekends}
+          \label{fig:OWE_topAS_gen_bps}
     \end{subfigure}
-    \caption{Impact of new year holidays on data rate of academic and business traffic}
-    \label{fig:topAS_gen_BCH_CH}
+    \caption{Impact of weekends on top ASes generating data}
+    \label{fig:topAS_gen_OWD_OWE}
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \begin{subfigure}{\figSzeMahdi\columnwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/OWD_top14AS_generating_fps.png}
+          \caption{Top 14 ASes generating flow during working days}
+          \label{fig:OWD_topAS_gen_fps}
+    \end{subfigure}
+    \begin{subfigure}{\figSzeMahdi\columnwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/OWE_top14AS_generating_fps.png}
+          \caption{Top 14 ASes generating flow during weekends}
+          \label{fig:OWE_topAS_gen_fps}
+    \end{subfigure}
+    \caption{Impact of weekends on top ASes generating flow}
+    \label{fig:flowrate_topAS_gen_OWD_OWE}
+\end{figure}
+
+
+\begin{figure}[hbt!]
+    \centering
+    \begin{subfigure}{\figSzeMahdi\columnwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/OWD_top14AS_recieving_bps.png}
+          \caption{Top 14 ASes receiving traffic during working days}
+          \label{fig:OWD_topAS_rec_bps}
+    \end{subfigure}
+    \begin{subfigure}{\figSzeMahdi\columnwidth}
+          \centering
+          \includegraphics[width=\columnwidth]{img/OWE_top14AS_recieving_bps.png}
+          \caption{Top 14 ASes receiving traffic during weekends}
+          \label{fig:OWE_topAS_rec_bps}
+    \end{subfigure}
+    \caption{Impact of weekends on top ASes receiving data}
+    \label{fig:topAS_rec_OWD_OWE}
 \end{figure}
 
 \begin{figure}[hbt!]
     \centering
     \begin{subfigure}{\figSzeMahdi\columnwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/BCH2_top14AS_generating_fps.png}
-          \caption{Top 14 ASes generating flow before new year holidays}
-          \label{fig:BCH2_topAS_gen_fps}
+          \includegraphics[width=\columnwidth]{img/OWD_top14AS_recieving_fps.png}
+          \caption{Top 14 ASes receiving flow during working days}
+          \label{fig:OWD_topAS_rec_fps}
     \end{subfigure}
     \begin{subfigure}{\figSzeMahdi\columnwidth}
           \centering
-          \includegraphics[width=\columnwidth]{img/CH2_top14AS_generating_fps.png}
-          \caption{Top 14 ASes generating flow during new year holidays}
-          \label{fig:CH2_topAS_gen_fps}
+          \includegraphics[width=\columnwidth]{img/OWE_top14AS_recieving_fps.png}
+          \caption{Top 14 ASes receiving flow during weekends}
+          \label{fig:OWE_topAS_rec_fps}
     \end{subfigure}
-    \caption{Impact of new year holidays on flow rate of academic and business traffic}
-    \label{fig:flowrate_topAS_gen_BCH_CH}
-\end{figure}
-
-
-\begin{figure}[hbt!]
-    \centering
-    \begin{subfigure}{\figSzeMahdi\columnwidth}
-          \centering
-          \includegraphics[width=\columnwidth]{img/BCH2_top14AS_recieving_bps.png}
-          \caption{Top 14 ASes receiving traffic before new year holidays}
-          \label{fig:BCH2_topAS_rec_bps}
-    \end{subfigure}
-    \begin{subfigure}{\figSzeMahdi\columnwidth}
-          \centering
-          \includegraphics[width=\columnwidth]{img/CH2_top14AS_recieving_bps.png}
-          \caption{Top 14 ASes receiving traffic during new year holidays}
-          \label{fig:CH2_topAS_rec_bps}
-    \end{subfigure}
-    \caption{Impact of new year holidays on data rate of academic and business traffic}
-    \label{fig:topAS_rec_BCH_CH}
-\end{figure}
-
-\begin{figure}[hbt!]
-    \centering
-    \begin{subfigure}{\figSzeMahdi\columnwidth}
-          \centering
-          \includegraphics[width=\columnwidth]{img/BCH2_top14AS_recieving_fps.png}
-          \caption{Top 14 ASes receiving flow before new year holidays}
-          \label{fig:BCH2_topAS_rec_fps}
-    \end{subfigure}
-    \begin{subfigure}{\figSzeMahdi\columnwidth}
-          \centering
-          \includegraphics[width=\columnwidth]{img/CH2_top14AS_recieving_fps.png}
-          \caption{Top 14 ASes receiving flow during new year holidays}
-          \label{fig:CH2_topAS_rec_fps}
-    \end{subfigure}
-    \caption{Impact of new year holidays on flow rate of academic and business traffic}
-    \label{fig:flowrate_topAS_rec_BCH_CH}
+    \caption{Impact of weekends on top ASes receiving flows}
+    \label{fig:flowrate_topAS_rec_OWD_OWE}
 \end{figure}
 
 \subsection{Discussion}
@@ -382,7 +382,7 @@ Fig.~\ref{fig:datarate_acaBus_BCH_CH} illustrates the data-rate pattern of Acade
           \caption{Top 14 ASes generating traffic during new year holidays}
           \label{fig:CH2_topAS_gen_bps}
     \end{subfigure}
-    \caption{Impact of new year holidays on data rate of academic and business traffic}
+    \caption{Impact of new year holidays on top ASes generating data}
     \label{fig:topAS_gen_BCH_CH}
 \end{figure}
 
@@ -400,7 +400,7 @@ Fig.~\ref{fig:datarate_acaBus_BCH_CH} illustrates the data-rate pattern of Acade
           \caption{Top 14 ASes generating flow during new year holidays}
           \label{fig:CH2_topAS_gen_fps}
     \end{subfigure}
-    \caption{Impact of new year holidays on flow rate of academic and business traffic}
+    \caption{Impact of new year holidays on top ASes generating flow}
     \label{fig:flowrate_topAS_gen_BCH_CH}
 \end{figure}
 
@@ -419,7 +419,7 @@ Fig.~\ref{fig:datarate_acaBus_BCH_CH} illustrates the data-rate pattern of Acade
           \caption{Top 14 ASes receiving traffic during new year holidays}
           \label{fig:CH2_topAS_rec_bps}
     \end{subfigure}
-    \caption{Impact of new year holidays on data rate of academic and business traffic}
+    \caption{Impact of new year holidays on top ASes receiving data}
     \label{fig:topAS_rec_BCH_CH}
 \end{figure}
 
@@ -437,7 +437,7 @@ Fig.~\ref{fig:datarate_acaBus_BCH_CH} illustrates the data-rate pattern of Acade
           \caption{Top 14 ASes receiving flow during new year holidays}
           \label{fig:CH2_topAS_rec_fps}
     \end{subfigure}
-    \caption{Impact of new year holidays on flow rate of academic and business traffic}
+    \caption{Impact of new year holidays on on top ASes receiving flow}
     \label{fig:flowrate_topAS_rec_BCH_CH}
 \end{figure}
 
@@ -520,7 +520,7 @@ Due to the COVID19 pandemic, traffic in terms of bytes dropped by almost one-thi
           \caption{Flow-rate during COVID-19 pandemic}
           \label{fig:CO_acaBus_fps}
     \end{subfigure}
-    \caption{Impact of COVID-19 pandemic on flow rate of academic and business traffic}
+    \caption{Impact of COVID-19 pandemic on flow rate of top ASes}
     \label{fig:flowrate_acaBus_BCO_CO}
 \end{figure}
 \subsection{NRENs Traffic}
@@ -540,7 +540,7 @@ Due to the COVID19 pandemic, traffic in terms of bytes dropped by almost one-thi
           \caption{Top 14 ASes generating traffic during COVID-19 pandemic}
           \label{fig:CO2_topAS_gen_bps}
     \end{subfigure}
-    \caption{Impact of COVID-19 pandemic on data rate of academic and business traffic}
+    \caption{Impact of COVID-19 pandemic on top ASes generating data}
     \label{fig:topAS_gen_BCO_CO}
 \end{figure}
 
@@ -557,7 +557,7 @@ Due to the COVID19 pandemic, traffic in terms of bytes dropped by almost one-thi
           \caption{Top 14 ASes generating flow during COVID-19 pandemic}
           \label{fig:Co2_topAS_gen_fps}
     \end{subfigure}
-    \caption{Impact of COVID-19 pandemic on flow rate of academic and business traffic}
+    \caption{Impact of COVID-19 pandemic on top ASes generating flow}
     \label{fig:flowrate_topAS_gen_BCO_CO}
 \end{figure}
 
@@ -575,7 +575,7 @@ Due to the COVID19 pandemic, traffic in terms of bytes dropped by almost one-thi
           \caption{Top 14 ASes receiving traffic during COVID-19 pandemic}
           \label{fig:CO2_topAS_rec_bps}
     \end{subfigure}
-    \caption{Impact of COVID-19 pandemic on data rate of academic and business traffic}
+    \caption{Impact of COVID-19 pandemic on top ASes receiving  data}
     \label{fig:topAS_rec_BCO_CO}
 \end{figure}
 
@@ -592,7 +592,7 @@ Due to the COVID19 pandemic, traffic in terms of bytes dropped by almost one-thi
           \caption{Top 14 ASes receiving flow during COVID-19 pandemic}
           \label{fig:CO2_topAS_rec_fps}
     \end{subfigure}
-    \caption{Impact of COVID-19 pandemic on flow rate of academic and business traffic}
+    \caption{Impact of COVID-19 pandemic on top ASes receiving flow}
     \label{fig:flowrate_topAS_rec_BCO_CO}
 \end{figure}
 \subsection{Discussion}
